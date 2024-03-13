@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "CP",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -41,6 +43,13 @@
 					"id" : "CP::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-CP-Debug-ef99ff62e954f029c58e.json",
 					"name" : "CP",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "edu::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-edu-Debug-c7fd0e8e80b6c5404465.json",
+					"name" : "edu",
 					"projectIndex" : 0
 				}
 			]
