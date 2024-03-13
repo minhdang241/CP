@@ -55,6 +55,12 @@ build CMakeFiles/CP.dir/0_999/test.cpp.o: CXX_COMPILER__CP_unscanned_Debug /User
   OBJECT_DIR = CMakeFiles/CP.dir
   OBJECT_FILE_DIR = CMakeFiles/CP.dir/0_999
 
+build CMakeFiles/CP.dir/LC/3072_Distribute_Elements_Into_Two_Arrays_II.cpp.o: CXX_COMPILER__CP_unscanned_Debug /Users/minhdg241/CLionProjects/CP/LC/3072_Distribute_Elements_Into_Two_Arrays_II.cpp || cmake_object_order_depends_target_CP
+  DEP_FILE = CMakeFiles/CP.dir/LC/3072_Distribute_Elements_Into_Two_Arrays_II.cpp.o.d
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/CP.dir
+  OBJECT_FILE_DIR = CMakeFiles/CP.dir/LC
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target CP
@@ -63,7 +69,7 @@ build CMakeFiles/CP.dir/0_999/test.cpp.o: CXX_COMPILER__CP_unscanned_Debug /User
 #############################################
 # Link the executable CP
 
-build CP: CXX_EXECUTABLE_LINKER__CP_Debug CMakeFiles/CP.dir/0_999/test.cpp.o
+build CP: CXX_EXECUTABLE_LINKER__CP_Debug CMakeFiles/CP.dir/0_999/test.cpp.o CMakeFiles/CP.dir/LC/3072_Distribute_Elements_Into_Two_Arrays_II.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/CP.dir
   POST_BUILD = :
