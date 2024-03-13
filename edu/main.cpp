@@ -4,21 +4,15 @@
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
     int n, m;
     cin >> n >> m;
-
     segtree st;
     st.init(n);
-    vector<int> inputs;
-    for (int i = 0; i < n; i++) {
-        int x;
-        cin >> x;
-        inputs.push_back(x);
+    vector<int> a(n);
+    for  (int i = 0; i < a.size(); i++) {
+        cin >> a[i];
     }
-    st.build(inputs);
+    st.build(a);
     while (m--) {
         int op;
         cin >> op;
@@ -29,7 +23,9 @@ int main() {
         } else {
             int l, r;
             cin >> l >> r;
-            cout << st.sum(l, r) << "\n";
+            cout << st.sum(l, r) << endl;
         }
     }
+    return 0;
+
 }

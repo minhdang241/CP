@@ -20,7 +20,7 @@ struct segtree {
 
     void build(const vector<int> &inputs, int cur_idx, int l, int r) {
         if (r - l == 1) {
-            if (l < (int)inputs.size()) {
+            if (l < (int) inputs.size()) {
                 sums[cur_idx] = inputs[l];
             }
         } else {
@@ -41,9 +41,9 @@ struct segtree {
         } else {
             int m = (l + r) / 2;
             if (idx < m) {
-                set(idx, val, 2* cur_idx + 1, l, m);
+                set(idx, val, 2 * cur_idx + 1, l, m);
             } else {
-                set(idx, val, 2* cur_idx + 2, m, r);
+                set(idx, val, 2 * cur_idx + 2, m, r);
             }
             sums[cur_idx] = sums[2 * cur_idx + 1] + sums[2 * cur_idx + 2];
         }
@@ -57,18 +57,20 @@ struct segtree {
     int sum(int l, int r, int cur_idx, int cur_l, int cur_r) {
         if (cur_l >= r || l >= cur_r) {
             return 0;
-        } else if (cur_l >= l && cur_r <= r) {
-            return sums[cur_idx];
-        } else {
-            int m = (l + r) / 2;
-            int s1 = sum(l, r, 2 * cur_idx + 1, cur_l, m);
-            int s2 = sum(l, r, 2 * cur_idx + 2, m, cur_r);
-            return s1 + s2;
         }
+        if (cur_l >= l && cur_r <= r) {
+            return sums[cur_idx];
+        }
+        int m = (cur_l + cur_r) / 2;
+        int s1 = sum(l, r, 2 * cur_idx + 1, cur_l, m);
+        int s2 = sum(l, r, 2 * cur_idx + 2, m, cur_r);
+        return s1 + s2;
     }
+
     int sum(int l, int r) {
         return sum(l, r, 0, 0, size);
     }
+
 };
 
 #endif //CP_SEGMENT_TREE_H
