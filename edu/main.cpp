@@ -9,7 +9,7 @@ int main() {
     cin.tie(nullptr);
     int n, m;
     cin >> n >> m;
-    segtree st;
+    item_segtree st;
     st.init(n);
     vector<int> a(n);
     for  (int i = 0; i < a.size(); i++) {
@@ -26,7 +26,8 @@ int main() {
         } else {
             int l, r;
             cin >> l >> r;
-            cout << st.sum(l, r) << endl;
+            item i = st.calc(l, r);
+            cout << i.m << " " <<  i.c << "\n";
         }
     }
     return 0;
